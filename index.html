@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rise in Pink · Breast Cancer Awareness &amp; Women's Health Initiative</title>
+<meta name="description" content="Rise in Pink is a breast cancer awareness and women's health campaign by Unicoin Foundation to promote early detection and empower women through education, support and community.">
+<meta property="og:title" content="Rise in Pink">
+<meta property="og:description" content="A breast cancer awareness and women's health campaign by Unicoin Foundation.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="theme-color" content="#10202d">
+<link rel="icon" href="assets/rise-in-pink-logo.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Layout: Rise in Pink visual guide palette/logo + Rise Venezuela components + Komen-style light pages. No black: navy is the darkest color. (white pages, Montserrat Bold headlines with an accent last line, Inter body, square CTAs),
+   gold swapped for campaign pink. Section rhythm follows Rise Venezuela. Single light look by design, like the brand site. */
+:root{
+  /* Rise in Pink visual guide: white #FFFFFF · gold #FCD144 · navy #10202D · pink #EA3869 · light grey #DBDBDB */
+  --white:#ffffff; --ink:#10202d; --grey:#5a6672; --light:#dbdbdb; --mist:#fdf1f4;
+  --pink:#ea3869; --pink-deep:#cf2556; --pink-soft:#fde4eb; --berry:#10202d; --gold:#fcd144;
+  --display:"Montserrat",ui-sans-serif,system-ui,sans-serif;
+  --body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:clamp(16px,4vw,48px); --max:1180px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0}
+.hl{color:var(--pink)}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--body);font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+section{padding-block:clamp(64px,9vw,120px)}
+.center{text-align:center}
+.head{text-align:center;max-width:46rem;margin-inline:auto}
+.head .lead{margin-inline:auto}
+.head .eyebrow{margin-bottom:12px}
+.center h2,.center .lead{margin-inline:auto}
+.sec-title{font-size:clamp(2.2rem,4.8vw,3.8rem)}
+.lead{color:var(--grey);margin-top:18px;max-width:40rem}
+.source{margin-top:20px;font-size:.78rem;color:var(--grey)}
+
+/* buttons: same pill CTA as Rise Venezuela, pink instead of yellow */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;
+  padding:1.05em 2em;border-radius:999px;border:2px solid var(--pink);background:var(--pink);color:var(--white);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.btn:hover{background:var(--pink-deep);border-color:var(--pink-deep);transform:translateY(-1px)}
+.btn .heart{width:1em;height:1em;fill:currentColor;flex:none}
+.btn.sec{background:transparent;color:var(--pink);border-color:var(--pink)}
+.btn.sec:hover{background:var(--pink);color:var(--white)}
+.on-pink .btn{background:var(--white);border-color:var(--white);color:var(--pink)}
+.on-pink .btn:hover{background:var(--pink-soft);border-color:var(--pink-soft)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+
+/* logo: white version on pink (no black in this campaign) */
+.wordmark{height:24px;width:auto;display:block}
+
+/* NAV */
+/* header: transparent over the hero photo (white logo), turns white with the color logo on scroll */
+header{position:fixed;left:0;right:0;top:0;padding-top:env(safe-area-inset-top,0px);z-index:10;background:linear-gradient(rgba(16,32,45,.45),transparent);color:var(--white);transition:background .25s,box-shadow .25s}
+header.solid{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--light),0 6px 20px rgba(16,32,45,.06)}
+.logo .lg-d{display:none}
+header.solid .logo .lg-w{display:none}
+header.solid .logo .lg-d{display:block}
+header.solid .lang span{background:var(--light)}
+header.solid .lang button{color:var(--grey)}
+header.solid .lang button[aria-pressed="true"]{color:var(--pink)}
+header.solid .burger i{background:var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;align-items:center;gap:2px;font-family:var(--display)}
+.lang span{width:1px;height:12px;background:rgba(255,255,255,.3)}
+.lang button{all:unset;cursor:pointer;font-size:.78rem;font-weight:600;letter-spacing:.1em;padding:.4em .6em;color:rgba(255,255,255,.75)}
+.lang button[aria-pressed="true"]{color:var(--white);font-weight:700}
+.camp{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;color:var(--ink)}
+.camp-txt{display:grid;line-height:1.1}
+.camp small{font-family:var(--body);font-weight:600;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.camp .badge{width:34px;height:34px;border-radius:3px;background:var(--pink);display:grid;place-items:center;flex:none}
+.camp .badge svg{width:20px;height:20px}
+.burger{all:unset;cursor:pointer;width:24px;display:grid;gap:5px;padding:6px}
+.burger i{display:block;height:2px;background:var(--white)}
+.logo{display:block;height:34px;width:auto}
+.logo img{height:100%;width:auto;display:block}
+.nav .btn{padding:.8em 1.5em;font-size:.75rem}
+
+/* HERO: one photo, one title, one line, one CTA (visual guide hero) */
+.hero{position:relative;color:var(--white);overflow:hidden;min-height:clamp(560px,78vh,760px);display:grid;align-items:center;padding-block:clamp(120px,12vw,160px) clamp(72px,9vw,120px);background:var(--ink)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,32,45,.92) 0%,rgba(16,32,45,.7) 35%,rgba(16,32,45,0) 70%)}
+.hero-grid{position:relative;z-index:2;width:100%;max-width:var(--max);margin-inline:auto}
+.hero-copy{max-width:34rem}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);font-weight:800;line-height:1;letter-spacing:-.03em}
+.hero h1 .hl{color:var(--pink)}
+.hero .sub{margin-top:22px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.5;color:#e9edf1;max-width:30rem}
+.hero .btn{margin-top:34px}
+.from{font-family:var(--display);font-weight:400;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.25;color:var(--grey)}
+.from b{display:block;font-weight:700;font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:.02em;color:var(--ink)}
+.headline{display:grid;grid-template-columns:auto auto;align-items:end;justify-content:start;column-gap:14px;margin-top:28px}
+.headline .story{font-family:var(--display);font-weight:700;font-size:clamp(.95rem,1.6vw,1.2rem);line-height:1.2;max-width:9em;padding-bottom:.7em;letter-spacing:-.01em}
+.headline .ten{font-family:var(--display);font-size:clamp(6rem,15vw,11rem);font-weight:800;line-height:.8;letter-spacing:-.05em;color:var(--pink)}
+.headline .ml{grid-column:1/-1;font-family:var(--display);font-size:clamp(3.2rem,8vw,6.4rem);font-weight:800;line-height:.9;letter-spacing:-.04em}
+.hero .lede{display:grid;gap:18px;margin-top:30px;font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.45;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+.pk{color:var(--pink);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.footnote{font-size:.75rem;color:var(--grey);margin-top:28px;max-width:38rem;line-height:1.5}
+.ribbon-art{width:100%;max-width:100%;aspect-ratio:1}
+.ribbon-art svg{width:100%;height:100%;display:block}
+.ring{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1.5}
+.stamp{font-family:var(--display);font-weight:700;fill:var(--berry);font-size:30px;letter-spacing:.18em;text-transform:uppercase}
+.stamp-g{transform-origin:250px 250px;animation:spin 60s linear infinite}
+.ribbon-path{fill:none;stroke:var(--pink);stroke-width:34;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;animation:draw 2.2s cubic-bezier(.6,.05,.3,1) both}
+.ribbon-shade{fill:none;stroke:#f6a3ba;stroke-width:34;stroke-linecap:round;opacity:.45}
+@keyframes draw{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* PHOTO SLOTS: swap each for a real <img> (object-fit:cover); placeholder shows the brief */
+.photo{margin:0;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 60% at 60% 35%,rgba(232,67,110,.25),transparent 70%),linear-gradient(160deg,#f9c9d7,#f08aa6)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo[data-ph]::before{content:"FOTO · " attr(data-ph);position:absolute;top:16px;left:16px;right:16px;font-family:var(--body);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(74,22,49,.7);line-height:1.5}
+
+/* PARTNERS: "Powered by Purpose" + Unicoin Foundation banner (logo knocked out over the photo) */
+.partners{background:var(--white)}
+.uf-logo{display:block;width:min(70%,420px);height:auto;margin:clamp(36px,5vw,56px) auto 0}
+.pb-ben{margin-top:36px;text-align:center;font-size:.85rem;color:var(--grey)}
+/* ONE IN EIGHT */
+.one8{background:linear-gradient(160deg,#fdd5e1 0%,#f8a3bb 100%)}
+.one8 .source{color:var(--ink);opacity:.7}
+.one8 .big{font-family:var(--display);font-weight:800;font-size:clamp(4rem,13vw,9.5rem);line-height:.9;letter-spacing:-.04em;color:var(--pink-deep)}
+.one8 .word{font-family:var(--display);font-weight:800;font-size:clamp(3.6rem,12vw,9rem);line-height:.9;letter-spacing:-.045em}
+.one8 .sub{font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.25;margin:18px auto 0;max-width:22ch}
+.people{display:flex;justify-content:center;gap:clamp(6px,1.4vw,14px);margin-top:36px}
+.people svg{width:clamp(24px,4.4vw,42px);height:auto;fill:#ffe6ee}
+.people svg:first-child{fill:var(--pink-deep)}
+
+/* BY THE NUMBERS (U.S.) — rings + discs, on white */
+.btn-num{background:var(--white)}
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:48px auto 0;max-width:900px;justify-items:center}
+.ring-card{position:relative;width:min(100%,210px);aspect-ratio:1;max-width:100%}
+.ring-card svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring-card .trk{fill:none;stroke:var(--pink-soft);stroke-width:10}
+.ring-card .val{fill:none;stroke:var(--pink);stroke-width:10;stroke-linecap:round}
+.ring-card .in{position:absolute;inset:17%;display:grid;place-content:center;text-align:center;gap:6px}
+.ring-card b{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.ring-card span{font-size:.8rem;line-height:1.3;color:var(--grey)}
+.dots{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:32px}
+.dot{width:min(100%,210px);aspect-ratio:1;border-radius:50%;background:var(--pink);color:var(--white);display:grid;place-content:center;text-align:center;gap:6px;padding:26px}
+.dot b{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1}
+.dot span{font-size:.82rem;line-height:1.3}
+.btn-num .source{margin-top:28px}
+
+/* FIVE FACTS — uniform colored cards, white text */
+.facts{background:var(--mist)}
+.fact-list{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;counter-reset:f}
+.fact-list li{counter-increment:f;background:var(--pink);color:var(--white);border-radius:18px;padding:28px 22px 30px;display:grid;gap:14px;align-content:start}
+.fact-list li::before{content:counter(f);width:40px;height:40px;border-radius:50%;background:var(--white);color:var(--pink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.1rem}
+.fact-list b{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,1.5vw,1.3rem);line-height:1.2;letter-spacing:-.01em}
+.fact-list span{font-size:.92rem;line-height:1.55;color:rgba(255,255,255,.92)}
+/* OFFER — centered, over a blurred campaign photo with a pink wash */
+.offer{position:relative;overflow:hidden;color:var(--white);text-align:center;background:var(--pink)}
+.offer-bg{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:55% 50%}
+.offer::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(234,56,105,.62),rgba(207,37,86,.72))}
+.offer .wrap{position:relative;z-index:2;max-width:900px}
+.offer .eyebrow{color:var(--white);opacity:.9}
+.offer .hl{color:var(--white);opacity:.8}
+.offer .sec-title{margin-top:12px}
+.offer p{color:#fff3f6;margin:20px auto 0;max-width:36rem}
+.offer p strong{color:var(--white)}
+.supply{display:block;margin-top:14px;font-size:.85rem;font-style:italic;color:#ffe3ec}
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:s;text-align:left}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--white);color:var(--ink);border-radius:14px;padding:16px 18px;font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.25}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1.2rem;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--pink);color:var(--white)}
+.offer .btn{margin-top:36px}
+.offer .footnote{margin:28px auto 0;color:#ffd6e2;max-width:40rem}
+/* PILLARS — brand-style image cards with label at the bottom */
+.pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:44px;text-align:left}
+.pillar{display:grid;gap:14px;align-content:start}
+.pillar .art{aspect-ratio:3/4;max-width:100%;border-radius:6px}
+.pillar .art .label{z-index:1;position:absolute;left:0;right:0;bottom:0;padding:40px 16px 16px;font-family:var(--display);font-weight:700;font-size:1rem;color:var(--white);text-align:center;background:linear-gradient(transparent,rgba(16,32,45,.8))}
+.pillar p{font-size:.93rem;color:var(--grey)}
+
+/* CRYPTO4GOOD */
+.c4g{background:var(--mist);position:relative;overflow:hidden}
+.c4g .wrap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.c4g .tag{color:var(--ink);font-family:var(--display);font-weight:800;font-size:clamp(3rem,8.5vw,7.5rem);line-height:.9;letter-spacing:-.04em}
+.c4g .tag span{color:var(--pink)}
+.c4g h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
+.c4g p{margin-top:16px;color:var(--grey);max-width:36rem}
+
+/* ADVOCATES */
+.adv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.adv-card{color:var(--white);border-radius:6px;padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-content:end;aspect-ratio:4/5;max-width:100%}
+.adv-card>*{position:relative;z-index:2}
+.adv-card>img{position:absolute;z-index:0}
+.adv-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 35%,rgba(16,32,45,.88))}
+.hashtag{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid rgba(255,255,255,.8);border-radius:999px;padding:.4em .9em;font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.adv .btn{margin-top:28px}
+
+/* FAQ */
+.faq{background:var(--mist)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:start}
+.faq-list{display:grid;gap:8px}
+details{background:var(--white);border-radius:6px;padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1;color:var(--pink);transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding-bottom:20px;color:var(--grey);font-size:.96rem}
+
+/* CLOSE — echoes the brandbook "Thank You!" slide */
+.close{position:relative;overflow:hidden}
+.close-mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:130%;width:auto;max-width:none;filter:brightness(0) invert(.93) sepia(.4) hue-rotate(290deg) saturate(3);opacity:.35;pointer-events:none}
+.close .wrap{position:relative;text-align:center}
+.close h2 .reg{font-weight:400}
+.close .lead{margin-inline:auto}
+.close .btn{margin-top:32px}
+
+/* FOOTER */
+footer{background:var(--ink);color:#c9d1d9;padding-block:52px;font-size:.88rem}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+.foot h4{margin:0 0 10px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--white);font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--pink)}
+.legal{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.75rem;color:#9aa6b2}
+
+@media (max-width:900px){
+  .hero-grid,.adv-grid,.faq-grid,.c4g .wrap{grid-template-columns:1fr}
+  .hero{min-height:560px;align-items:end}
+  .hero::before{background:linear-gradient(0deg,rgba(16,32,45,.96) 0%,rgba(16,32,45,.85) 45%,rgba(16,32,45,.35) 75%,rgba(16,32,45,.1) 100%)}
+  .logo{height:28px}
+  .pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:1fr}
+  .partner-row{grid-template-columns:1fr}
+  .dot{width:170px;padding:20px}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .nav .btn{display:none}
+  .camp{font-size:1.05rem}
+  .camp small{display:none}
+  .wordmark{height:19px}
+  .fact-list,.feat{grid-template-columns:1fr}
+  .rings{grid-template-columns:1fr;gap:20px}
+  .ring-card{width:200px}
+  .people{gap:4px}
+  .foot{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><img class="lg-w" src="assets/rise-in-pink-logo-white.png" alt="Rise in Pink"><img class="lg-d" src="assets/rise-in-pink-logo.png" alt="Rise in Pink"></a>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-es" aria-pressed="false">ES</button><span></span>
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      </div>
+      <a class="btn" href="#donate"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span data-i18n="donate">Donate now</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="assets/hero.jpg" alt="Smiling woman in a pink T-shirt with a pink ribbon at a breast cancer awareness walk">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 data-i18n="heroTitle">Together, we <span class="hl">Rise in Pink.</span></h1>
+        <p class="sub" data-i18n="heroSub">A breast cancer awareness and women's health campaign to promote early detection and empower women through education, support and community.</p>
+        <a class="btn" href="#donate"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span data-i18n="donate">Donate now</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners">
+    <div class="wrap">
+      <h2 class="sec-title center" data-i18n="partnersTitle">Powered by Purpose.<br>Driven by Community.</h2>
+      <img class="uf-logo" src="assets/unicoin-foundation-logo.png" alt="Unicoin Foundation">
+      <p class="pb-ben"><span data-i18n="beneficiary">Beneficiary</span>: <span data-i18n="benName">[Beneficiary foundation]</span></p>
+    </div>
+  </section>
+
+
+  <!-- ONE IN EIGHT -->
+  <section class="one8 center">
+    <div class="wrap">
+      <div class="big" data-i18n="o8a">1 in 8</div>
+      <div class="word" data-i18n="o8b">women</div>
+      <p class="sub" data-i18n="o8c">will develop breast cancer in their lifetime</p>
+      <div class="people" role="img" aria-label="1 of 8 women highlighted"><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg><svg viewBox="0 0 24 48" aria-hidden="true"><circle cx="12" cy="5" r="4.5"/><path d="M6.5 12h11l4.5 17h-5v17h-4V33h-2v13h-4V29H2z"/></svg></div>
+      <p class="source" data-i18n="o8src">United States figure. Source: American Cancer Society.</p>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="btn-num">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow" data-i18n="bnEyebrow">United States</p><h2 class="sec-title" data-i18n="bnTitle">Breast cancer<br><span class="hl">by the numbers.</span></h2></div>
+      <div class="rings">
+        <div class="ring-card"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52"/><circle class="val" cx="60" cy="60" r="52" stroke-dasharray="323.5 326.7"/></svg><div class="in"><b>99%</b><span data-i18n="r1">5-year survival when found early (localized)</span></div></div>
+        <div class="ring-card"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52"/><circle class="val" cx="60" cy="60" r="52" stroke-dasharray="300.6 326.7"/></svg><div class="in"><b>92%</b><span data-i18n="r2">5-year survival, all stages combined</span></div></div>
+        <div class="ring-card"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="trk" cx="60" cy="60" r="52"/><circle class="val" cx="60" cy="60" r="52" stroke-dasharray="32.7 326.7"/></svg><div class="in"><b>10%</b><span data-i18n="r3">of cases are thought to be hereditary</span></div></div>
+      </div>
+      <div class="dots">
+        <div class="dot"><b>322K</b><span data-i18n="dt1">new invasive cases expected in U.S. women in 2026</span></div>
+        <div class="dot"><b>4M+</b><span data-i18n="dt2">breast cancer survivors in the U.S.</span></div>
+      </div>
+      <p class="source center" data-i18n="bnSrc">Source: American Cancer Society. "Up to 10%" hereditary, per ACS.</p>
+    </div>
+  </section>
+
+
+  <!-- FIVE FACTS -->
+  <section class="facts" id="facts">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow" data-i18n="fEyebrow">Know the facts</p><h2 class="sec-title" data-i18n="fTitle">5 facts every woman<br><span class="hl">should know.</span></h2></div>
+      <ol class="fact-list">
+        <li><b data-i18n="f1t">Early detection saves lives.</b><span data-i18n="f1d">Mortality drops when breast cancer is found and treated early.</span></li>
+        <li><b data-i18n="f2t">Small lumps are easier to treat.</b><span data-i18n="f2d">Tumors that haven't reached the lymph nodes are more likely to be treated successfully.</span></li>
+        <li><b data-i18n="f3t">Screening starts at 50.</b><span data-i18n="f3d">Mammography programs usually target women aged 50 to 69. Ask your doctor what fits your history.</span></li>
+        <li><b data-i18n="f4t">Men can get it too.</b><span data-i18n="f4d">About 0.5% to 1% of breast cancers occur in men.</span></li>
+        <li><b data-i18n="f5t">Progress is real.</b><span data-i18n="f5d">In high-income countries, breast cancer mortality fell 40% between the 1980s and 2020.</span></li>
+      </ol>
+      <p class="source center" data-i18n="fSrc">Source: World Health Organization.</p>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="offer on-pink" id="donate">
+    <img class="offer-bg" src="assets/donate-bg.jpg" alt="" aria-hidden="true">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="offerEyebrow">One dollar donated. One unicoin received.</p>
+      <h2 class="sec-title" data-i18n="offerTitle">Donate in Pink.<br><span class="hl">Receive unicoins.</span></h2>
+      <p data-i18n="offerP">Unicoin Foundation has allocated a fund of <strong>[250,000] unicoins</strong> to reward donors who support this initiative. For every dollar donated, you will receive one unicoin*.</p>
+      <span class="supply" data-i18n="supply">While supplies last.</span>
+      <ol class="steps">
+        <li data-i18n="step1">Your donation</li>
+        <li data-i18n="step2">Funds screening and patient care</li>
+        <li data-i18n="step3">You receive unicoins</li>
+      </ol>
+      <a class="btn" href="#donate"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span data-i18n="donate">Donate now</span></a>
+      <p class="footnote" data-i18n="footnote">*Unicoin is the token of TransparentBusiness, a U.S.-registered company.</p>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars center">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:12px" data-i18n="pilEyebrow">Where your donation goes</p><h2 class="sec-title" data-i18n="pilTitle">Your support<br><span class="hl">helps provide.</span></h2>
+      <p class="lead" data-i18n="pilP">Four ways your donation reaches women this October.</p>
+      <div class="pillar-grid">
+        <article class="pillar"><div class="art photo"><img src="assets/pillar-screening.jpg" alt=""><span class="label" data-i18n="p1t">Early screening</span></div><p data-i18n="p1d">Breast exams and mammograms for women who would otherwise go without.</p></article>
+        <article class="pillar"><div class="art photo"><img src="assets/pillar-treatment.jpg" alt=""><span class="label" data-i18n="p2t">Access to treatment</span></div><p data-i18n="p2d">Help with diagnosis, treatment costs and transport so a diagnosis turns into care.</p></article>
+        <article class="pillar"><div class="art photo"><img src="assets/pillar-support.jpg" alt=""><span class="label" data-i18n="p3t">Patient and family support</span></div><p data-i18n="p3d">Emotional support, support groups and practical help for patients and their families.</p></article>
+        <article class="pillar"><div class="art photo"><img src="assets/pillar-awareness.jpg" alt=""><span class="label" data-i18n="p4t">Awareness and education</span></div><p data-i18n="p4d">Community workshops that teach women the signs and when to ask for a check-up.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRYPTO4GOOD -->
+  <section class="c4g">
+    <div class="wrap">
+      <div class="tag">Crypto<br><span>4Good</span></div>
+      <div>
+        <h2 data-i18n="c4gTitle">Crypto that turns generosity<br><span class="hl">into impact.</span></h2>
+        <p data-i18n="c4gP">Rise in Pink shows how blockchain can do more than move capital: it can fund early detection, connect communities and give women more time. This is Crypto4Good: technology in service of humanity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVOCATES -->
+  <section class="adv">
+    <div class="wrap adv-grid">
+      <div class="adv-card photo"><img src="assets/advocates.jpg" alt="" style="object-position:40% 30%">
+        <p class="hashtag">#RiseInPink</p>
+        <div class="chips"><span class="chip" data-i18n="c1">Creators</span><span class="chip" data-i18n="c2">Community leaders</span><span class="chip" data-i18n="c3">Ambassadors</span></div>
+      </div>
+      <div>
+        <p class="eyebrow" data-i18n="advEyebrow">Beyond donating</p>
+        <h2 class="sec-title" style="margin-top:12px" data-i18n="advTitle">Use your voice.<br><span class="hl">Remind someone to get checked.</span></h2>
+        <p class="lead" data-i18n="advP">One post can be the reminder a friend, a mother or a sister needed. Join creators, community leaders and advocates who are using their platforms to promote early detection and raise funds this October.</p>
+        <a class="btn sec" href="#top"><span data-i18n="join">Join the campaign</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap faq-grid">
+      <div><p class="eyebrow">FAQ</p><h2 class="sec-title" style="margin-top:12px" data-i18n="faqTitle">Frequently asked<br><span class="hl">questions.</span></h2></div>
+      <div class="faq-list">
+        <details><summary data-i18n="q1">What is Rise in Pink?</summary><p data-i18n="a1">Rise in Pink is Unicoin Foundation's campaign for Breast Cancer Awareness Month. It raises funds for screening, treatment access and support for women with breast cancer, and rewards donors with unicoins.</p></details>
+        <details><summary data-i18n="q2">Who is leading the campaign?</summary><p data-i18n="a2">The campaign is led by Unicoin Foundation in partnership with [Beneficiary foundation], which receives the donations.</p></details>
+        <details><summary data-i18n="q3">Where does my donation money go?</summary><p data-i18n="a3">Donations are received by [Beneficiary foundation] and go to the four areas listed above: early screening, access to treatment, patient and family support, and awareness.</p></details>
+        <details><summary data-i18n="q4">How do I receive unicoins for my donation?</summary><p data-i18n="a4">[Same process as Rise Venezuela.]</p></details>
+        <details><summary data-i18n="q5">What does "One dollar donated. One unicoin received." mean?</summary><p data-i18n="a5">For every dollar you donate, Unicoin Foundation gives you one unicoin from the campaign fund, while supplies last.</p></details>
+        <details><summary data-i18n="q6">Is my donation a purchase of unicoins?</summary><p data-i18n="a6">[Same legal answer as Rise Venezuela.]</p></details>
+        <details><summary data-i18n="q7">How many unicoins are available for this campaign?</summary><p data-i18n="a7">Unicoin Foundation has allocated [250,000] unicoins. The reward ends when the fund runs out.</p></details>
+        <details><summary data-i18n="q8">What kind of support can my donation help provide?</summary><p data-i18n="a8">Breast exams and mammograms, help with treatment and transport costs, emotional support for patients and families, and community education on early signs.</p></details>
+        <details><summary data-i18n="q9">How can I help besides donating?</summary><p data-i18n="a9">Share the campaign with #RiseInPink, remind the women around you to get checked, and join as a creator, community leader or ambassador.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="close">
+    <img class="close-mark" src="assets/unicoin-mark-white.png" alt="" aria-hidden="true">
+    <div class="wrap">
+      <h2 class="sec-title" data-i18n="closeTitle"><span class="reg">Together,</span> we give women<br><span class="hl">more time.</span></h2>
+      <p class="lead" data-i18n="closeP">Thank you for standing with women facing breast cancer.</p>
+      <a class="btn" href="#donate"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><span data-i18n="donate">Donate now</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="assets/rise-in-pink-logo-white.png" alt="Rise in Pink" style="height:30px;width:auto;display:block"><p style="margin-top:14px" data-i18n="tag">Breast Cancer Awareness &amp; Women's Health Initiative</p><p style="margin-top:18px;font-size:.78rem;color:#9aa6b2"><span data-i18n="poweredBy">Powered by</span></p><img src="assets/unicoin-foundation-white.png" alt="Unicoin Foundation" style="height:18px;width:auto;margin-top:8px;display:block"></div>
+      <div><h4 data-i18n="follow">Follow the impact</h4><ul><li><a href="https://www.instagram.com/unicoinfoundation" rel="noopener">Instagram</a></li><li><a href="https://x.com/" rel="noopener">X / Twitter</a></li><li><a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a></li></ul></div>
+      <div><h4 data-i18n="secure">Secure donations</h4><p data-i18n="secureP">Secure donations. Real impact. Always.</p></div>
+    </div>
+    <div class="legal"><span data-i18n="dev">Developed by Unicoin Foundation and Tu-Be Marketing.</span><span>unicoin.org</span></div>
+  </div>
+</footer>
+
+<script>
+const ES={
+donate:"Doná ahora",learn:"Ver la historia",
+heroEyebrow:"Mes de concientización sobre el cáncer de mama · Octubre 2026",
+tag:"Iniciativa de concientización sobre el cáncer de mama y salud de la mujer",
+story:"La historia que tiene el potencial de salvar",ml:"millones de vidas",
+heroP1:"Impulsado por <strong>Unicoin Foundation</strong>.<br>Las donaciones serán recibidas por <strong>[Fundación beneficiaria]</strong>.",
+heroP2:"Por cada <span class=\"pk\">dólar</span> que dones, recibirás un <span class=\"pk\">unicoin</span>*",
+footnote:"*Unicoin es el token de TransparentBusiness, empresa registrada en EE. UU.",
+partnersTitle:"Impulsados por un propósito.<br><span class=\"hl\">Movidos por la comunidad.</span>",
+ledBy:"Liderado por",inPartnership:"En alianza con",beneficiary:"Beneficiaria",benSlot:"[Logo de la fundación beneficiaria]",
+o8a:"1 de cada 8",o8b:"mujeres",o8c:"desarrollará cáncer de mama a lo largo de su vida",o8src:"Dato de Estados Unidos. Fuente: American Cancer Society.",
+numEyebrow:"La magnitud del desafío",numTitle:"El cáncer más frecuente<br><span class=\"hl\">en mujeres.</span>",
+numP:"El cáncer de mama afecta a mujeres en todos los países del mundo. Cuando se detecta y trata a tiempo, muchas menos mujeres mueren. Acceder a una mamografía todavía depende de dónde vive cada mujer.",
+s1:"mujeres diagnosticadas en el mundo en 2024",s2:"muertes por cáncer de mama en 2024",s3:"países donde es el cáncer más frecuente en mujeres",s4:"mujeres en países de IDH muy alto será diagnosticada a lo largo de su vida",
+source:"Fuente: Organización Mundial de la Salud, nota descriptiva sobre cáncer de mama.",
+fEyebrow:"Conocé los datos",fTitle:"5 datos que toda mujer<br><span class=\"hl\">debería conocer.</span>",
+f1t:"La detección temprana salva vidas.",f1d:"La mortalidad baja cuando el cáncer de mama se detecta y trata a tiempo.",
+f2t:"Los bultos pequeños se tratan mejor.",f2d:"Los tumores que no llegaron a los ganglios linfáticos tienen más probabilidades de tratarse con éxito.",
+f3t:"Los controles empiezan a los 50.",f3d:"Los programas de mamografía suelen apuntar a mujeres de 50 a 69 años. Consultá con tu médico según tus antecedentes.",
+f4t:"Los hombres también pueden tenerlo.",f4d:"Entre el 0,5% y el 1% de los cánceres de mama se dan en hombres.",
+f5t:"El progreso es real.",f5d:"En países de altos ingresos, la mortalidad por cáncer de mama bajó un 40% entre los años 80 y 2020.",
+fSrc:"Fuente: Organización Mundial de la Salud.",
+offerEyebrow:"Un dólar donado. Un unicoin recibido.",offerTitle:"Doná en Pink.<br><span class=\"hl\">Recibí unicoins.</span>",
+offerP:"Unicoin Foundation destinó un fondo de <strong>[250.000] unicoins</strong> para recompensar a quienes apoyen esta iniciativa. Por cada dólar donado, recibirás un unicoin*.",
+supply:"Hasta agotar stock.",step1:"Tu donación",step2:"Financia controles y atención",step3:"Recibís unicoins",
+pilTitle:"Tu apoyo<br><span class=\"hl\">ayuda a brindar.</span>",pilP:"Cuatro formas en que tu donación llega a las mujeres este octubre.",
+p1t:"Detección temprana",p1d:"Exámenes de mamas y mamografías para mujeres que de otro modo no podrían hacerlos.",
+p2t:"Acceso a tratamiento",p2d:"Ayuda con diagnóstico, costos de tratamiento y traslados para que un diagnóstico se convierta en atención.",
+p3t:"Apoyo a pacientes y familias",p3d:"Contención emocional, grupos de apoyo y ayuda práctica para pacientes y sus familias.",
+p4t:"Concientización y educación",p4d:"Talleres comunitarios para que las mujeres reconozcan las señales y sepan cuándo pedir un control.",
+c4gTitle:"Cripto que convierte la generosidad<br><span class=\"hl\">en impacto.</span>",
+c4gP:"Rise in Pink muestra que blockchain puede hacer más que mover capital: puede financiar la detección temprana, conectar comunidades y darles más tiempo a las mujeres. Esto es Crypto4Good: tecnología al servicio de la humanidad.",
+c1:"Creadores",c2:"Líderes comunitarios",c3:"Embajadores",advEyebrow:"Más allá de donar",
+advTitle:"Usá tu voz.<br><span class=\"hl\">Recordale a alguien que se haga un control.</span>",
+advP:"Un posteo puede ser el recordatorio que necesitaba una amiga, una madre o una hermana. Sumate a creadores, líderes comunitarios y voceros que usan sus plataformas para promover la detección temprana y recaudar fondos este octubre.",
+join:"Sumate a la campaña",faqTitle:"Preguntas<br><span class=\"hl\">frecuentes.</span>",
+q1:"¿Qué es Rise in Pink?",a1:"Rise in Pink es la campaña de Unicoin Foundation por el Mes de concientización sobre el cáncer de mama. Recauda fondos para detección, acceso a tratamiento y apoyo a mujeres con cáncer de mama, y recompensa a los donantes con unicoins.",
+q2:"¿Quién lidera la campaña?",a2:"La campaña es liderada por Unicoin Foundation en alianza con [Fundación beneficiaria], que recibe las donaciones.",
+q3:"¿A dónde va el dinero de mi donación?",a3:"Las donaciones las recibe [Fundación beneficiaria] y se destinan a las cuatro áreas de arriba: detección temprana, acceso a tratamiento, apoyo a pacientes y familias, y concientización.",
+q4:"¿Cómo recibo unicoins por mi donación?",a4:"[Mismo proceso que Rise Venezuela.]",
+q5:"¿Qué significa \"Un dólar donado. Un unicoin recibido.\"?",a5:"Por cada dólar que dones, Unicoin Foundation te entrega un unicoin del fondo de la campaña, hasta agotar stock.",
+q6:"¿Mi donación es una compra de unicoins?",a6:"[Misma respuesta legal que Rise Venezuela.]",
+q7:"¿Cuántos unicoins hay disponibles para esta campaña?",a7:"Unicoin Foundation destinó [250.000] unicoins. La recompensa termina cuando se agota el fondo.",
+q8:"¿Qué tipo de ayuda puede brindar mi donación?",a8:"Exámenes de mamas y mamografías, ayuda con costos de tratamiento y traslados, contención para pacientes y familias, y educación comunitaria sobre señales tempranas.",
+q9:"¿Cómo puedo ayudar además de donar?",a9:"Compartí la campaña con #RiseInPink, recordales a las mujeres que te rodean que se hagan controles y sumate como creador, líder comunitario o embajador.",
+bnEyebrow:"Estados Unidos",bnTitle:"Cáncer de mama<br><span class=\"hl\">en números.</span>",
+r1:"supervivencia a 5 años si se detecta temprano (localizado)",r2:"supervivencia a 5 años, todos los estadios",r3:"de los casos se considera hereditario",
+dt1:"nuevos casos invasivos estimados en mujeres de EE. UU. en 2026",dt2:"sobrevivientes de cáncer de mama en EE. UU.",
+bnSrc:"Fuente: American Cancer Society. \"Hasta 10%\" hereditario, según ACS.",
+heroTitle:"Juntas, somos <span class=\"hl\">Rise in Pink.</span>",heroSub:"Una campaña de concientización sobre el cáncer de mama y salud de la mujer para promover la detección temprana y empoderar a las mujeres a través de la educación, el apoyo y la comunidad.",poweredBy:"Impulsado por",
+pilEyebrow:"A dónde va tu donación",
+partnersTitle:"Impulsados por un propósito.<br>Movidos por la comunidad.",benName:"[Fundación beneficiaria]",
+closeTitle:"<span class=\"reg\">Juntos,</span> les damos a las mujeres<br><span class=\"hl\">más tiempo.</span>",closeP:"Gracias por acompañar a las mujeres que enfrentan el cáncer de mama.",
+tagline:"Construyendo el futuro de la riqueza digital para todos.",follow:"Seguí el impacto",secure:"Donaciones seguras",secureP:"Donaciones seguras. Impacto real. Siempre.",
+dev:"Desarrollado por Unicoin Foundation y Tu-Be Marketing."
+};
+const nodes=[...document.querySelectorAll('[data-i18n]')];
+nodes.forEach(n=>n.dataset.en=n.innerHTML);
+function setLang(l){
+  nodes.forEach(n=>{const k=n.dataset.i18n;n.innerHTML=l==='es'&&ES[k]?ES[k]:n.dataset.en});
+  document.documentElement.lang=l;
+  document.getElementById('lang-es').setAttribute('aria-pressed',l==='es');
+  document.getElementById('lang-en').setAttribute('aria-pressed',l==='en');
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+document.getElementById('lang-es').onclick=()=>setLang('es');
+document.getElementById('lang-en').onclick=()=>setLang('en');
+const hdr=document.querySelector('header');
+const onScroll=()=>hdr.classList.toggle('solid',window.scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+let saved='en';try{saved=localStorage.getItem('lang')||'en'}catch(e){}
+if(saved==='es')setLang('es');
+</script>
+
+</body>
+</html>
