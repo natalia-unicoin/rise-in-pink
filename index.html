@@ -38,7 +38,7 @@ p{margin:0}
 .eyebrow{font-family:var(--body);font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
 section{padding-block:clamp(64px,9vw,120px)}
 .center{text-align:center}
-.head{text-align:center;max-width:46rem;margin-inline:auto}
+.head{text-align:center;max-width:calc(46rem + 100px);margin-inline:auto}
 .head .lead{margin-inline:auto}
 .head .eyebrow{margin-bottom:12px}
 .center h2,.center .lead{margin-inline:auto}
@@ -93,10 +93,10 @@ header.solid .burger i{background:var(--ink)}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,32,45,.92) 0%,rgba(16,32,45,.7) 35%,rgba(16,32,45,0) 70%)}
 .hero-grid{position:relative;z-index:2;width:100%;max-width:var(--max);margin-inline:auto}
-.hero-copy{max-width:34rem}
+.hero-copy{max-width:calc(34rem + 100px)}
 .hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);font-weight:800;line-height:1;letter-spacing:-.03em}
 .hero h1 .hl{color:var(--pink)}
-.hero .sub{margin-top:22px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.5;color:#e9edf1;max-width:30rem}
+.hero .sub{margin-top:22px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.5;color:#e9edf1;max-width:calc(30rem + 100px)}
 .hero .btn{margin-top:34px}
 .from{font-family:var(--display);font-weight:400;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.25;color:var(--grey)}
 .from b{display:block;font-weight:700;font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:.02em;color:var(--ink)}
@@ -108,7 +108,7 @@ header.solid .burger i{background:var(--ink)}
 .hero .lede strong{color:var(--ink)}
 .pk{color:var(--pink);font-weight:600}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.footnote{font-size:.75rem;color:var(--grey);margin-top:28px;max-width:38rem;line-height:1.5}
+.footnote{font-size:.75rem;color:var(--grey);margin-top:28px;max-width:calc(38rem + 100px);line-height:1.5}
 .ribbon-art{width:100%;max-width:100%;aspect-ratio:1}
 .ribbon-art svg{width:100%;height:100%;display:block}
 .ring{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1.5}
@@ -141,7 +141,7 @@ header.solid .burger i{background:var(--ink)}
 .one8 .source{color:var(--ink);opacity:.7}
 .one8 .big{font-family:var(--display);font-weight:800;font-size:clamp(4rem,13vw,9.5rem);line-height:.9;letter-spacing:-.04em;color:var(--pink-deep)}
 .one8 .word{font-family:var(--display);font-weight:800;font-size:clamp(3.6rem,12vw,9rem);line-height:.9;letter-spacing:-.045em}
-.one8 .sub{font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.25;margin:18px auto 0;max-width:22ch}
+.one8 .sub{font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.25;margin:18px auto 0;max-width:calc(22ch + 100px)}
 .people{display:flex;justify-content:center;gap:clamp(6px,1.4vw,14px);margin-top:36px}
 .people svg{width:clamp(24px,4.4vw,42px);height:auto;fill:#ffe6ee}
 .people svg:first-child{fill:var(--pink-deep)}
@@ -163,7 +163,7 @@ header.solid .burger i{background:var(--ink)}
 .stat-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:48px 32px;margin:52px auto 0;max-width:1060px}
 .stat-item{grid-column:span 2;display:grid;justify-items:center;align-content:start;text-align:center;gap:14px}
 .stat-item:nth-child(4){grid-column:2 / span 2}
-.stat-cap{font-size:.88rem;line-height:1.55;color:var(--grey);max-width:30ch}
+.stat-cap{font-size:.88rem;line-height:1.55;color:var(--grey);max-width:calc(30ch + 100px)}
 .stat-src{font-size:.75rem;font-weight:600;color:var(--pink);text-decoration:none}
 .stat-src:hover{text-decoration:underline}
 
@@ -205,7 +205,7 @@ header.solid .burger i{background:var(--ink)}
 .recog{background:#f9f9f9}
 .recog-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
 .recog .sec-title{margin-top:12px}
-.recog-intro p{color:var(--grey);margin-top:18px;max-width:34rem}
+.recog-intro p{color:var(--grey);margin-top:18px;max-width:calc(34rem + 100px)}
 .recog-intro p.eyebrow{color:var(--pink);margin-top:0}
 .recog-intro p strong{color:var(--ink);font-weight:700}
 .recog-intro .rec-note,.recog-intro .rec-foot{font-size:var(--fs-caption);margin-top:14px}
@@ -222,7 +222,7 @@ header.solid .burger i{background:var(--ink)}
 .pillar .art img{transition:transform .6s ease}
 .pillar .art .cap{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:0;text-align:center;padding:24px 22px 28px;background:linear-gradient(to bottom,rgba(16,32,45,0) 50%,rgba(16,32,45,.8) 100%);transition:background-color .35s ease;background-color:rgba(16,32,45,0)}
 .pillar .art .label{line-height:1.2;white-space:nowrap;font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--white);transition:transform .35s ease}
-.pillar .art .cap p{font-size:.88rem;line-height:1.5;color:var(--white);max-width:24ch;max-height:0;opacity:0;overflow:hidden;margin-top:0;transition:max-height .45s ease,opacity .35s ease,margin-top .35s ease}
+.pillar .art .cap p{font-size:.88rem;line-height:1.5;color:var(--white);max-width:calc(24ch + 100px);max-height:0;opacity:0;overflow:hidden;margin-top:0;transition:max-height .45s ease,opacity .35s ease,margin-top .35s ease}
 .pillar .art:hover .cap,.pillar .art:focus-within .cap,.pillar .art:focus .cap{background-color:rgba(16,32,45,.78)}
 .pillar .art:hover img,.pillar .art:focus img{transform:scale(1.05)}
 .pillar .art:hover .cap p,.pillar .art:focus .cap p{max-height:240px;opacity:1;margin-top:12px}
@@ -235,7 +235,7 @@ header.solid .burger i{background:var(--ink)}
 .c4g .tag{color:var(--ink);font-family:var(--display);font-weight:800;font-size:clamp(3rem,8.5vw,7.5rem);line-height:.9;letter-spacing:-.04em}
 .c4g .tag span{color:var(--pink)}
 .c4g h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
-.c4g p{margin-top:16px;color:var(--grey);max-width:36rem}
+.c4g p{margin-top:16px;color:var(--grey);max-width:calc(36rem + 100px)}
 
 /* ADVOCATES */
 .adv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
@@ -415,7 +415,7 @@ footer{font-size:.875rem}
 .bx.wide,.bx-photo{grid-column:span 2}
 .bx-label{font-size:var(--fs-small);font-weight:600;line-height:1.4;min-height:2.8em}
 .bx-num{white-space:nowrap;font-family:var(--display);font-weight:800;font-size:var(--fs-bento);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-.bx-cap{font-size:var(--fs-caption);line-height:1.5;max-width:36ch;margin-top:auto}
+.bx-cap{font-size:var(--fs-caption);line-height:1.5;max-width:calc(36ch + 100px);margin-top:auto}
 .bx-foot{font-size:var(--fs-caption);font-weight:600;text-decoration:none;color:inherit}
 .bx-foot:hover{text-decoration:underline}
 .arw{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -660,7 +660,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="wrap recog-grid">
       <div class="recog-intro">
         <p class="eyebrow" data-i18n="recEyebrow">Proposed · Unicoin Foundation</p>
-        <h2 class="sec-title" id="rec-title" data-i18n="recTitle">Unicoin Recognition Program</h2>
+        <h2 class="sec-title" id="rec-title" data-i18n="recTitle">Unicoin<br>Recognition<br>Program</h2>
         <p data-i18n="recP">Unicoin Foundation proposes to recognize eligible donors with <strong>1 unicoin for every eligible US$1 donated</strong>, up to a total campaign allocation of <strong>100,000 unicoins</strong>. This is a token count, not a valuation of US$1 per unicoin.</p>
         <p class="rec-note" data-i18n="recNote">The program is proposed and subject to authorization. Issuance is not automatic and has no set delivery date. Availability ends when the 100,000-unicoin allocation is exhausted.</p>
         <p class="rec-foot" data-i18n="footnote">*Unicoin is the token of TransparentBusiness, a U.S.-registered company.</p>
@@ -869,7 +869,7 @@ sb1:"Rise in Pink es una iniciativa independiente liderada por Unicoin Foundatio
 sb2:"Las donaciones se realizan directamente a través de la plataforma de donación de NBCF. Ni Rise in Pink ni Unicoin Foundation reciben ni administran estos fondos.",
 sb3:"Rise in Pink y Unicoin Foundation no están afiliadas, patrocinadas ni respaldadas por National Breast Cancer Foundation.",
 dmRecT:"Programa de reconocimiento Unicoin",dmCta:"Continuar a NBCF",
-recEyebrow:"Propuesto · Unicoin Foundation",recTitle:"Programa de reconocimiento Unicoin",
+recEyebrow:"Propuesto · Unicoin Foundation",recTitle:"Programa de<br>reconocimiento<br>Unicoin",
 recP:"Unicoin Foundation propone reconocer a los donantes elegibles con <strong>1 unicoin por cada US$1 elegible donado</strong>, hasta una asignación total de <strong>100.000 unicoins</strong> para la campaña. Es una cantidad de tokens, no una valuación de US$1 por unicoin.",
 rec1:"Nuestro equipo se pone en contacto para pedirte el comprobante de tu donación y la información necesaria para el due diligence.",
 rec2:"Unicoin Foundation revisa la documentación y completa el due diligence correspondiente.",
@@ -888,7 +888,7 @@ function fixWidows(root){
   (root||document).querySelectorAll('main p, main li, main h1, main h2, main h3, main b, main summary, main .label, main .bx-label, main .bx-cap, .dm p, footer p, section p, section li, section h2, section h3, section b, section summary').forEach(el=>{
     const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const ts=[];let t;while(t=w.nextNode())ts.push(t);
     ts.forEach(n=>{n.nodeValue=n.nodeValue.replace(SHORT,'$1$2\u00a0').replace(/EE\. UU\./g,'EE.\u00a0UU.').replace(/ · /g,'\u00a0· ').replace(/U\.S\.-/g,'U.S.\u2011')});
-    for(let i=ts.length-1;i>=0;i--){const v=ts[i].nodeValue;if(!v.trim())continue;const m=v.replace(/\s+$/,'');const k=m.lastIndexOf(' ');if(k>0&&m.length-k<=18){ts[i].nodeValue=m.slice(0,k)+'\u00a0'+m.slice(k+1)+v.slice(m.length)}break}
+    for(let i=ts.length-1;i>=0;i--){const v=ts[i].nodeValue;if(!v.trim())continue;const m=v.replace(/\s+$/,'');const k=m.lastIndexOf(' ');const pw=m.slice(0,k).split(/[\s\u00a0]/).pop();if(k>0&&m.length-k<=20&&(pw.length+m.length-k)<=(/^H[1-3]$/.test(el.tagName)||el.closest('h1,h2,h3')?16:30)){ts[i].nodeValue=m.slice(0,k)+'\u00a0'+m.slice(k+1)+v.slice(m.length)}break}
   });
 }
 function setLang(l){
