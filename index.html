@@ -5,7 +5,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="version" content="202610201305">
+<meta name="version" content="202610201452">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rise in Pink · Breast Cancer Awareness &amp; Women's Health Initiative</title>
 <meta name="description" content="Rise in Pink is a breast cancer awareness and women's health campaign by Unicoin Foundation to promote early detection and empower women through education, support and community.">
@@ -465,7 +465,7 @@ footer{font-size:.875rem}
 .dm-steps li::before{content:counter(d) ".";position:absolute;left:0;top:0;font-family:var(--display);font-weight:800;color:var(--ink)}
 .dm-sub{font-family:var(--display);font-weight:700;color:var(--ink);margin-top:4px}
 .dm-mail{font-weight:700;color:var(--ink);user-select:all}
-.dm-note{font-size:var(--fs-caption);line-height:1.5}
+.dm-note{font-size:11.5px;line-height:1.5}
 .dm-form{padding:36px 32px;display:flex;flex-direction:column;justify-content:center;min-width:0}
 .dm-fields{display:grid;gap:10px}
 .fld{display:grid;gap:4px}
@@ -518,6 +518,7 @@ p,li,.bx-cap,summary{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 .adv-close{display:block;margin-top:14px;font-weight:600}
 .bx-de{font-size:.5em;font-weight:400;letter-spacing:0;vertical-align:baseline}
+.rec-sub{display:block;margin-top:10px;font-size:calc(var(--fs-body) - 1.5px)}
 /* Mobile swipe carousels */
 .swipe-dots{display:none}
 @media (max-width:560px){
@@ -666,7 +667,7 @@ h1,h2,h3{text-wrap:balance}
       <div class="recog-intro">
         <p class="eyebrow" data-i18n="recEyebrow">Proposed · Unicoin Foundation</p>
         <h2 class="sec-title" id="rec-title" data-i18n="recTitle">Unicoin<br>Recognition<br>Program</h2>
-        <p data-i18n="recP">Unicoin Foundation proposes to recognize eligible donors with <strong>1 unicoin for every eligible US$1 donated</strong>, up to a total campaign allocation of <strong>100,000 unicoins</strong>. This is a token count, not a valuation of US$1 per unicoin.</p>
+        <p data-i18n="recP">Unicoin Foundation proposes to recognize eligible donors with <strong>1 unicoin for every eligible US$1 donated</strong>, up to a total campaign allocation of <strong>100,000 unicoins</strong>.<span class="rec-sub">This is a token count, not a valuation of US$1 per unicoin.</span></p>
         <p class="rec-note" data-i18n="recNote">The program is proposed and subject to authorization. Issuance is not automatic and has no set delivery date. Availability ends when the 100,000-unicoin allocation is exhausted.</p>
         <p class="rec-foot" data-i18n="footnote">*Unicoin is the token of TransparentBusiness, a U.S.-registered company.</p>
       </div>
@@ -711,9 +712,9 @@ h1,h2,h3{text-wrap:balance}
         <div class="chips"><span class="chip" data-i18n="ch1">Creators</span><span class="chip" data-i18n="ch2">Community leaders</span><span class="chip" data-i18n="ch3">Ambassadors</span></div>
       </div>
       <div>
-        <p class="eyebrow" data-i18n="advEyebrow">Beyond donating</p>
-        <h2 class="sec-title" style="margin-top:12px" data-i18n="advTitle">Use Your Voice.<br><span class="hl">Remind Someone to Get Checked.</span></h2>
-        <p class="lead" data-i18n="advP">Rise in Pink creators, community leaders and ambassadors share breast health awareness resources and point people to the official donation page. They speak for Rise in Pink, not for NBCF.</p>
+        <p class="eyebrow" data-i18n="advEyebrow">Rise With Us</p>
+        <h2 class="sec-title" style="margin-top:12px" data-i18n="advTitle">Your Voice Can Inspire.<br><span class="hl">Your Community<br>Can Make a Difference.</span></h2>
+        <p class="lead" data-i18n="advP">Join Rise in Pink and help bring breast cancer awareness to more people. As a creator, community leader or ambassador, you can use your platform to share trusted resources, encourage support and inspire others to get involved.<span class="adv-close">Together, let’s turn awareness into action.</span></p>
         <a class="btn sec" href="#top"><span data-i18n="join">Join the campaign</span></a>
       </div>
     </div>
@@ -776,7 +777,7 @@ h1,h2,h3{text-wrap:balance}
       <p data-i18n="dmP1">Donations are made directly to <strong>National Breast Cancer Foundation (NBCF)</strong>. Unicoin Foundation does not receive or administer these funds.</p>
       <p class="dm-sub" data-i18n="dmRecT">Unicoin Recognition Program</p>
       <p class="dm-step" data-i18n="dmS1">Our team will contact you to request proof of your donation and the information needed to complete the required due diligence before your unicoin certificate can be issued.</p>
-      <p class="dm-note" data-i18n="dmNote">Up to a total allocation of <strong>100,000 unicoins</strong>. A token count, not a US$1 valuation. Proposed program subject to authorization; issuance is not automatic and has no set delivery date.</p>
+      <p class="dm-note" data-i18n="dmNote">*Up to a maximum allocation of <strong>100,000 unicoins</strong>. One unicoin per US$1 donated refers to the number of tokens, not their market value. Certificate issuance is subject to the applicable review and due diligence and is not automatic.</p>
       </div>
     </div>
     <form class="dm-form" id="dm-form" novalidate>
@@ -855,7 +856,7 @@ dmTitle:"Doná en <span class=\"hl\">Pink.</span>",
 dmLead:"Completá el formulario y te llevamos a la página oficial de donación de NBCF.",
 dmP1:"Las donaciones se realizan directamente a <strong>National Breast Cancer Foundation (NBCF)</strong>. Unicoin Foundation no recibe ni administra estos fondos.",
 dmS1:"Nuestro equipo se pondrá en contacto para pedirte el comprobante de tu donación y la información necesaria para completar el due diligence requerido antes de que se pueda emitir tu certificado de unicoins.",
-dmNote:"Hasta una asignación total de <strong>100.000 unicoins</strong>. Es una cantidad de tokens, no una valuación de US$1 por unicoin. Programa propuesto sujeto a autorización; la emisión no es automática y no tiene fecha de entrega definida.",
+dmNote:"*Sujeto a una asignación máxima de <strong>100.000 unicoins</strong>. La entrega de un unicoin por cada US$1 donado indica la cantidad de tokens, no su valor de mercado. La emisión del certificado requiere completar la revisión y la debida diligencia correspondientes y no es automática.",
 fName:"Nombre completo *",fEmail:"Email *",fPhone:"Teléfono *",fDob:"Fecha de nacimiento *",fCountry:"País *",phCountry:"Tu país",
 phName:"Tu nombre completo",phEmail:"Tu email",phPhone:"Tu teléfono",
 fConsent:"Acepto que mis datos personales sean tratados de acuerdo con la <a href=\"#\" class=\"pp\">política de privacidad</a>.",
@@ -875,7 +876,7 @@ sb2:"Las donaciones se realizan directamente a través de la plataforma de donac
 sb3:"Rise in Pink y Unicoin Foundation no están afiliadas, patrocinadas ni respaldadas por National Breast Cancer Foundation.",
 dmRecT:"Programa de reconocimiento Unicoin",dmCta:"Continuar a NBCF",
 recEyebrow:"Propuesto · Unicoin Foundation",recTitle:"Programa de<br>reconocimiento<br>Unicoin",
-recP:"Unicoin Foundation propone reconocer a los donantes elegibles con <strong>1 unicoin por cada US$1 elegible donado</strong>, hasta una asignación total de <strong>100.000 unicoins</strong> para la campaña. Es una cantidad de tokens, no una valuación de US$1 por unicoin.",
+recP:"Unicoin Foundation propone reconocer tu apoyo a la causa con <strong>1 unicoin por cada US$1 de tu donación elegible</strong>, hasta un máximo de <strong>100.000 unicoins</strong> para esta campaña.<span class=\"rec-sub\">Esta equivalencia se refiere a la cantidad de tokens que podés recibir, no a su valor de mercado.</span>",
 rec1:"Nuestro equipo se pone en contacto para pedirte el comprobante de tu donación y la información necesaria para el due diligence.",
 rec2:"Unicoin Foundation revisa la documentación y completa el due diligence correspondiente.",
 rec3:"Luego, Unicoin Foundation procede a emitir tu certificado de unicoins.",
